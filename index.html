@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet"> -->
+	<link rel="stylesheet" href="grid/normalize.min.css">
+	<link rel="stylesheet" href="grid/grid.css">
+	<link rel="stylesheet" href="jquery.jMosaic.css">
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="jquery.jMosaic.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" ></script>
+	<title>grid</title>
+<body>
+	<header class="header">
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var touch = $('#touch-menu');
+		    var menu = $('.nav');
+		 
+		    $(touch).on('click', function(e) {
+		        e.preventDefault();
+		        menu.slideToggle();
+		    });
+		    $(window).resize(function(){
+		        var wid = $(window).width();
+		        if(wid > 760 && menu.is(':hidden')) {
+		            menu.removeAttr('style');
+		        }
+		    });
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<a href="#" id="touch-menu">Меню</a>
+		<nav>
+			<ul class="nav clearfix">
+				<li><a href="index.html">Главная страница</a></li>
+							<li><a href="grid1.html">О себе</a></li>
+							<li><a href="grid2.html">Мои достижения</a></li>
+							<li><a href="grid3.html">Жизнь нашей школы</a></li>
+							<li><a href="grid4.html">Виртуальный музей</a></li>
+							<li><a href="grid5.html">Учитель года</a></li>
+							<li><a href="grid6.html">Методические разработки</a></li>
+							
+			</ul>
+		</nav>
+				<section class="header_info">
+					<img align="center" src="img/5.gif" alt="" width="400" height="70">
+					<h1><center>Персональный сайт учителя истории МБОУ СОШ №9 с.Хвалынка Рой Романа Николаевича</center></h1>
+				</section>
+			</header>
+<section class="pat">
+	<h1>Главная страница</h1>
+</section>
+
+
+<section class="Photo">
+	<table class="cal" id="calendar2">
+  <thead>
+    <tr><td>‹<td colspan="5"><td>›
+    <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+  <tbody>
+  </table></section>
+  <img align="center" src="img/00000014.jpg" alt="" width="300" height="400">
+
+		<section class="grid">
+			<tt class="tt"><h2><center>Здравствуйте уважаемые просетители моего сайта!</center></h2>В наш информационный век всем необходимо владеть информационно-коммуникативными технологиями. Повсеместно осуществляется автоматизация определенных стандартных действий. Нам, учителям, необходимо научиться свободно чувствовать себя на этом новом информационно-образовательном пространстве, чтобы обмениваться своим опытом и знаниями.</tt><tt class="tt"><h2><center>Цель создания персонального сайта:</center></h2> Распространение педагогического опыта и школьной информации в интернет пространстве.<h2><center>Задачи:</center></h2>1.Собрать и систематизировать накопленный материал педагогического опыта 2.Развивать собственные навыки и умения работы в интернет пространстве 3. Пополнять содержимое персонального сайта соответствующими материалами.</tt>
+			<img align="center" src="img/byeb07.gif" alt="" width="400" height="200">
+</section>
+<style>
+#calendar2 {
+  width: 300px;
+  font: monospace;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+}
+#calendar2 thead tr:last-child {
+  font-size: small;
+  color: #000000;
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(2) {
+  color: #000000;
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+#calendar2 tbody td {
+  color: #0000A0;
+}
+#calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+  color: #FF0000;
+}
+#calendar2 tbody td.today {
+  background: rgb(220, 0, 0);
+  color: #fff;
+}
+</style>
+
+<script>
+function Calendar2(id, year, month) {
+var Dlast = new Date(year,month+1,0).getDate(),
+    D = new Date(year,month,Dlast),
+    DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
+    DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
+    calendar = '<tr>',
+    month=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+if (DNfirst != 0) {
+  for(var  i = 1; i < DNfirst; i++) calendar += '<td>';
+}else{
+  for(var  i = 0; i < 6; i++) calendar += '<td>';
+}
+for(var  i = 1; i <= Dlast; i++) {
+  if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+    calendar += '<td class="today">' + i;
+  }else{
+    calendar += '<td>' + i;
+  }
+  if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
+    calendar += '<tr>';
+  }
+}
+for(var  i = DNlast; i < 7; i++) calendar += '<td>&nbsp;';
+document.querySelector('#'+id+' tbody').innerHTML = calendar;
+document.querySelector('#'+id+' thead td:nth-child(2)').innerHTML = month[D.getMonth()] +' '+ D.getFullYear();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
+if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+    document.querySelector('#'+id+' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+}
+}
+Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
+// переключатель минус месяц
+document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
+  Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)-1);
+}
+// переключатель плюс месяц
+document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+  Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)+1);
+}
+</script>		
+</body>
+</html>
