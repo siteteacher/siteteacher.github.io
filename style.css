@@ -1,0 +1,245 @@
+
+
+							/*Слайдер.grid3*/
+
+#slider-wrap, #slider-wrap1, #slider-wrap2{ /* Îáîëî÷êà ñëàéäåðà è êíîïîê */
+	width:400px; 
+	}
+
+#slider, #slider1 , #slider2{ /* Îáîëî÷êà ñëàéäåðà */
+	width:400px;
+	height:230px;
+	overflow: hidden;
+	border:#eee solid 10px;
+	position:relative;}
+/*.slide{ 
+	width:100%;
+	height:100%;
+	}*/
+.sli-links, .sli-links1 , .sli-links2{ /* Êíîïêè ñìåíû ñëàéäîâ */
+	margin-top:10px;
+	text-align:center;}
+.sli-links .control-slide, .sli-links1 .control-slide1 , .sli-links2 .control-slide2{
+	margin:2px;
+	display:inline-block;
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:-9999px;
+	background:url(radioBg.png) center bottom no-repeat;}
+.sli-links .control-slide:hover, .sli-links1 .control-slide1:hover  .sli-links2 .control-slide2:hover{
+	cursor:pointer;
+	background-position:center center;}
+.sli-links .control-slide.active, .sli-links1 .control-slide1.active , .sli-links2 .control-slide2.active{
+	background-position:center top;}
+#prewbutton, #nextbutton, #prewbutton1, #nextbutton1, #prewbutton2, #nextbutton2 { /* Ññûëêà "Ñëåäóþùèé" è "Ïåäûäóùèé" */
+	display:block;
+	width:15px;
+	height:100%;
+	position:absolute;
+	top:0;
+	overflow:hidden;
+	text-indent:-999px;
+	background:url(arrowBg.png) left center no-repeat;
+	opacity:0.8;
+	z-index:3;
+	outline:none !important;}
+#prewbutton, #prewbutton1, #prewbutton2 {left:10px;}
+#nextbutton, #nextbutton1, #nextbutton2{
+	right:10px;
+	background:url(arrowBg.png) right center no-repeat;}
+#prewbutton:hover, #nextbutton:hover, #prewbutton1:hover, #nextbutton1:hover, #prewbutton2:hover, #nextbutton2:hover {
+	opacity:1;}
+
+
+
+
+						/*Скрываемый текст. grid3*/
+
+
+* скрываем чекбоксы и блоки с содержанием */
+.hide, .hide1, .hide2 .hide3, .hide4{
+    display: none; 
+}
+.hide + label ~ div, .hide1 + label ~ div, .hide2 + label ~ div, .hide3 + label ~ div, .hide4 + label ~ div{
+    display: none;
+}
+/* оформляем текст label */
+.hide + label, .hide1 + label , .hide2 + label , .hide3 + label , .hide4 + label{
+    border-bottom: 1px dotted green;
+    padding: 0;
+    color: green;
+    cursor: pointer;
+    display: inline-block; 
+}
+/* вид текста label при активном переключателе */
+.hide:checked + label, .hide1:checked + label, .hide2:checked + label , .hide3:checked + label, .hide4:checked + label {
+    color: red;
+    border-bottom: 0;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div, .hide1:checked + label + div, .hide2:checked + label + div , .hide3:checked + label + div, .hide4:checked + label + div{
+    display: block; 
+    background: #B05151;
+    -moz-box-shadow: inset 3px 3px 10px #7d8e8f;
+    -webkit-box-shadow: inset 10px 10px 10px #7d8e8f;
+    box-shadow: inset 3px 3px 10px #7d8e8f;
+    padding: 10px; 
+    border-radius: 10px;
+}
+
+/* demo контейнер */
+.demo, .demo1, .demo2,.demo3, .demo4{
+ 
+    margin: 4rem 2rem;
+
+
+}
+
+.demo label, .demo1 label, .demo2 label , .demo3 label, .demo4 label{
+  border-radius: 10px;
+  background: #E8CCB5;
+  color: #B05151;
+  padding: 15px 30px;
+  position: relative;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+  background-size: 100%;
+
+}
+.demo label :before, .eight label :after,.demo1 label :before, .eight1 label :after,.demo2 label :before, .eight2 label :after 
+.demo3 label :before, .eight3 label :after,.demo4 label :before, .eight4 label :after{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #F58262;
+  box-shadow: inset 0 -2px 0 #B05151;
+  opacity: 0;
+  transition: .5s ease-in-out;
+
+}
+.eight label :before {left: 13px;}
+.eight label :after {right: 13px;}
+.eight label :hover:before, .eight a:hover:after {opacity: 1;}
+
+.eight1 label :before {left: 13px;}
+.eight1 label :after {right: 13px;}
+.eight1 label :hover:before, .eight1 a:hover:after {opacity: 1;}
+
+.eight2 label :before {left: 13px;}
+.eight2 label :after {right: 13px;}
+.eight2 label :hover:before, .eight2 a:hover:after {opacity: 1;}
+
+.eight3 label :before {left: 13px;}
+.eight3 label :after {right: 13px;}
+.eight3 label :hover:before, .eight2 a:hover:after {opacity: 1;}
+
+.eight4 label :before {left: 13px;}
+.eight4 label :after {right: 13px;}
+.eight4 label :hover:before, .eight2 a:hover:after {opacity: 1;}
+
+
+
+
+.grid3, .grid31 , .grid32 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #800000;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+}
+
+
+.grid31{
+  background-color: #FF7F50;
+ }
+
+.grid32{
+  background-color: #9933CC;
+ }
+
+#calendar2 {
+  width: 100%;
+  font: monospace;
+  line-height: 1.2em;
+  font-size: 15px;
+  text-align: center;
+}
+#calendar2 thead tr:last-child {
+  font-size: small;
+  color: rgb(85, 85, 85);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(2) {
+  color: rgb(50, 50, 50);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+#calendar2 tbody td {
+  color: rgb(44, 86, 122);
+}
+#calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+  color: rgb(231, 140, 92);
+}
+#calendar2 tbody td.today {
+  background: rgb(220, 0, 0);
+  color: #fff;
+}
+<table id="calendar2">
+  <thead>
+    <tr><td>‹<td colspan="5"><td>›
+    <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+  <tbody>
+</table>
+
+<script>
+function Calendar2(id, year, month) {
+var Dlast = new Date(year,month+1,0).getDate(),
+    D = new Date(year,month,Dlast),
+    DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
+    DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
+    calendar = '<tr>',
+    month=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+if (DNfirst != 0) {
+  for(var  i = 1; i < DNfirst; i++) calendar += '<td>';
+}else{
+  for(var  i = 0; i < 6; i++) calendar += '<td>';
+}
+for(var  i = 1; i <= Dlast; i++) {
+  if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+    calendar += '<td class="today">' + i;
+  }else{
+    calendar += '<td>' + i;
+  }
+  if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
+    calendar += '<tr>';
+  }
+}
+for(var  i = DNlast; i < 7; i++) calendar += '<td>&nbsp;';
+document.querySelector('#'+id+' tbody').innerHTML = calendar;
+document.querySelector('#'+id+' thead td:nth-child(2)').innerHTML = month[D.getMonth()] +' '+ D.getFullYear();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
+document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
+if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+    document.querySelector('#'+id+' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+}
+}
+Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
+// переключатель минус месяц
+document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
+  Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)-1);
+}
+// переключатель плюс месяц
+document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+  Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)+1);
+}
+</script>
