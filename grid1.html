@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet"> -->
+	<link rel="stylesheet" href="grid/normalize.min.css">
+	<link rel="stylesheet" href="grid/grid.css">
+	<link rel="stylesheet" href="jquery.jMosaic.css">
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="jquery.jMosaic.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" ></script>
+	<title>grid</title>
+<body>
+	<header class="header">
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var touch = $('#touch-menu');
+		    var menu = $('.nav');
+		 
+		    $(touch).on('click', function(e) {
+		        e.preventDefault();
+		        menu.slideToggle();
+		    });
+		    $(window).resize(function(){
+		        var wid = $(window).width();
+		        if(wid > 760 && menu.is(':hidden')) {
+		            menu.removeAttr('style');
+		        }
+		    });
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<a href="#" id="touch-menu">Меню</a>
+		<nav>
+			<ul class="nav clearfix">
+				<li><a href="index.html">Главная страница</a></li>
+							<li><a href="grid1.html">О себе</a></li>
+							<li><a href="grid2.html">Мои достижения</a></li>
+							<li><a href="grid3.html">Жизнь нашей школы</a></li>
+							<li><a href="grid4.html">Виртуальный музей</a></li>
+							<li><a href="grid5.html">Учитель года</a></li>
+							<li><a href="grid6.html">Методические разработки</a></li>
+							
+			</ul>
+		</nav>
+	</div>
+</body>
+				<div class="header_info">
+					<img align="center" src="img/5.gif" alt="" width="400" height="70">
+					<h1><center>Персональный сайт учителя истории МБОУ СОШ №9 с.Хвалынка Рой Романа Николаевича</center></h1>
+				</div>
+			</header>
+	<section>
+	<div class="giv">
+			<img align="center" src="img/animashki-nadpisi-269.gif" alt="" width="220" height="70">
+	</div>
+</section>
+<section class="text">
+	 <tt> <b>Дата рождения: </b> 22.12.1976</tt>
+	 <tt> <b>Образование: </b> Уссурийский Государственный Педагогический Институт. 1.В 1998г.Факультет физической культуры. 2.В 2009г. Факультет истории.</tt>
+	 <tt> <b>Специальность: </b>1.Учитель физической культуры. 2.Учитель истории и обществознания.</tt>
+	 <tt> <b>Педагогический стаж:</b>21 год.</tt>
+	 <tt> <b>Место работы:</b> МБОУ СОШ №9 с.Хвалынка.</tt> 
+	 <tt> <b>Занимаемая должность:</b> учитель</h1> <p></p>
+	 <tt> <b>Преподаваемые предметы:</b> история России, всеобщая история, обществознание, ОБЖ, Физическая культура. </tt>
+</section> 

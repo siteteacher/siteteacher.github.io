@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet"> -->
+	<link rel="stylesheet" href="grid/normalize.min.css">
+	<link rel="stylesheet" href="grid/grid.css">
+	<link rel="stylesheet" href="jquery.jMosaic.css">
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="jquery.jMosaic.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" ></script>
+	<title>grid</title>
+</head>
+<body>
+		<header class="header">
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var touch = $('#touch-menu');
+		    var menu = $('.nav');
+		 
+		    $(touch).on('click', function(e) {
+		        e.preventDefault();
+		        menu.slideToggle();
+		    });
+		    $(window).resize(function(){
+		        var wid = $(window).width();
+		        if(wid > 760 && menu.is(':hidden')) {
+		            menu.removeAttr('style');
+		        }
+		    });
+		});
+	</script>
+<body>
+	<div class="container">
+		<a href="#" id="touch-menu">Меню</a>
+		<nav>
+			<ul class="nav clearfix">
+				<li><a href="index.html">Главная страница</a></li>
+							<li><a href="grid1.html">О себе</a></li>
+							<li><a href="grid2.html">Мои достижения</a></li>
+							<li><a href="grid3.html">Жизнь нашей школы</a></li>
+							<li><a href="grid4.html">Виртуальный музей</a></li>
+							<li><a href="grid5.html">Учитель года</a></li>
+							<li><a href="grid6.html">Методические разработки</a></li>
+							
+			</ul>
+		</nav>
+				<div class="header_info">
+					<h1><center>Персональный сайт учителя истории МБОУ СОШ №9 с.Хвалынка Рой Романа Николаевича</center></h1>
+				</div>
+		</header>
+	</div>
+	<section class="fon">
+<section class="pat">
+	<h1>Виртуальный музей истории школы</h1><tt>Приглашаю посетить экспозицию нашего виртуального музея, посвященную истории хвалынской школы. Выбрав любой из разделов, вы можете начать просмотр. Перемещаясь по разделам, вы пройдете исторический путь школы, встретитесь с учителями и учащимися школы разных лет, просматривая их фотографии и знакомясь с экспонатами и документами.</tt><h1>Приятного вам просмотра!</h1>
+</section>
+<section class="slka">
+	<a href="muzey.html">Экспонаты школьного музея</a>
+	<a href="school.html">История школы</a>
+	<a href="ped.html">Педагогический коллектив</a>
+	<a href="obelisk.html">Обелиск</a>
+</section>
+<center><a href="#top" onclick="window.scrollTo(0,0);return!1;">Наверх</a></center>
+</section>
+
+
