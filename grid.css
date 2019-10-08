@@ -78,6 +78,7 @@ body {
 }
 tt{
   background-image: url(../img/hinh-nen-slide-dep-3_023215415.jpeg);
+  padding: 20px;
 }
 h2 { 
   text-shadow: 1px 1px 1px #000000;
@@ -116,14 +117,10 @@ margin: 10px;
 
 
 .text {
-  display: grid;
-  grid-template-columns: 1fr;
+  margin: 30px;
   padding-top: 10px;
-  text-align: center;
-  color:
   font-style: italic; 
-  text-shadow: 2px;
-  font-size: 20px;
+  font-size: 25px;
 
 }
 b{
